@@ -6,6 +6,14 @@ export const GoBackBtn = () => {
 		<IconButton
 			size='large'
 			aria-label='delete'
+			sx={{
+				margin: '1rem',
+				backgroundColor: '#333',
+				'&:hover': {
+					backgroundColor: '#333',
+					opacity: '70%',
+				},
+			}}
 			onClick={() => {
 				window.location.href = '';
 			}}>

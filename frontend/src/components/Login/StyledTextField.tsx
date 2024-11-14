@@ -37,6 +37,9 @@ export const StyledTextField = ({
 				color: '#fff',
 			},
 		},
+		'& .MuiFormLabel-root': {
+			color: '#fff',
+		},
 	};
 
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

@@ -52,6 +52,14 @@ export const NewsCardContent = () => {
 	}, [news]);
 
 	useEffect(() => {
+		const intervalId = setInterval(() => {
+			getRandomArticle();
+		}, 10000);
+
+		return () => clearInterval(intervalId);
+	}, [article]);
+
+	useEffect(() => {
 		if (article) {
 			const articleImage = article['media:thumbnail'][0]['$']['url'];
 			const articleTitle = article['title'][0];
@@ -74,7 +82,7 @@ export const NewsCardContent = () => {
 	}
 
 	return article ? (
-		<div className='p-5'>
+		<div className='grid gap-5 p-5'>
 			<p className='text-2xl font-semibold'>{title}</p>
 			<p>{description}</p>
 		</div>

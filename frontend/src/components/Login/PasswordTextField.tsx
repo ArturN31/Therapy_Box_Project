@@ -53,6 +53,7 @@ export const PasswordTextField = ({
 					backgroundColor: 'unset',
 					'&:before': {
 						borderColor: '#fff',
+						backgroundColor: 'unset',
 					},
 					'&:after': {
 						borderColor: '#fff',

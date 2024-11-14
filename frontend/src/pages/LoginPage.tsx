@@ -10,7 +10,7 @@ export const LoginPage = ({ setRegister }: { setRegister: React.Dispatch<React.S
 			<p className='absolute inset-x-0 text-3xl text-center text-white bottom-10'>
 				New to the hackathon?&nbsp;
 				<a
-					className='text-yellow hover:cursor-pointer'
+					className='text-yellow hover:cursor-pointer hover:opacity-70'
 					onClick={() => setRegister(true)}>
 					Sign up
 				</a>

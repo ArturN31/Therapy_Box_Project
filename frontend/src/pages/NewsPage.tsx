@@ -25,6 +25,7 @@ export const NewsPage = () => {
 					<p className='col-span-2 p-4 text-6xl text-white md:p-0'>News</p>
 					<img
 						className='col-span-8 m-auto w-[400px] border-4 border-yellow rounded-md'
+						style={{ boxShadow: '0px 2px 6px -2px #000' }}
 						src={article.image}
 						alt='Article image'
 					/>

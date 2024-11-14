@@ -59,6 +59,14 @@ export const SportCardContent = () => {
 	}, [footballMatches]);
 
 	useEffect(() => {
+		const intervalId = setInterval(() => {
+			getRandomFootballMatch();
+		}, 10000);
+
+		return () => clearInterval(intervalId);
+	}, [randomMatch]);
+
+	useEffect(() => {
 		if (randomMatch) {
 			const homeTeamName = randomMatch['HomeTeam'];
 			const homeTeamGoals = randomMatch['FTHG'];
@@ -99,7 +107,7 @@ export const SportCardContent = () => {
 	}
 
 	return (
-		<>
+		<div className='grid gap-5 p-5'>
 			<div>
 				<p className='text-2xl font-semibold'>
 					<span>Football match </span>
@@ -109,7 +117,9 @@ export const SportCardContent = () => {
 					</span>
 				</p>
 			</div>
-			<div className='text-center border border-black rounded-md bg-[#aabbcc70] flex place-self-center'>
+			<div
+				className='text-center border border-black rounded-md bg-[#aabbcc70] flex place-self-center'
+				style={{ boxShadow: '0px 2px 6px -2px #000' }}>
 				<p className='grid basis-[40%] w-[200px]'>
 					<span className='px-3 py-1 text-2xl border-b border-black bg-[#333] text-white rounded-tl-[4px]'>
 						{matchData?.HomeTeamName}
@@ -142,6 +152,6 @@ export const SportCardContent = () => {
 					</span>
 				</p>
 			</div>
-		</>
+		</div>
 	);
 };

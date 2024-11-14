@@ -44,7 +44,7 @@ export const FileDropzone = ({ setFormData }: { setFormData: React.Dispatch<Reac
 
 	return (
 		<section className='container w-fit'>
-			<div {...getRootProps({ className: 'dropzone relative' })}>
+			<div {...getRootProps({ className: 'dropzone relative hover:cursor-pointer hover:opacity-70' })}>
 				<input {...getInputProps()} />
 				{image ? (
 					<img

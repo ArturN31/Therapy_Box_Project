@@ -122,7 +122,7 @@ export const RegisterForm = () => {
 			</div>
 
 			<div className='grid justify-center gap-2 text-center'>
-				<button className='m-auto'>
+				<button className='m-auto hover:opacity-70'>
 					<img
 						className='h-[60px]'
 						src={RegisterBtn}

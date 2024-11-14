@@ -116,7 +116,6 @@ export const ClothesCardContent = () => {
 					data={groupItemsByClothe(clothes)}
 					cx={150}
 					cy={150}
-					fill='#8884d8'
 					dataKey='value'
 					labelLine={false}
 					label={renderCustomizedLabel}>

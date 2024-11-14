@@ -66,6 +66,7 @@ export const PhotosPage = () => {
 		return gallery?.map((image, index) => (
 			<div
 				key={image.id}
+				style={{ boxShadow: '0px 2px 6px -2px #000' }}
 				className='relative border-4 rounded-md border-yellow'>
 				<p className='absolute top-[8px] left-[8px] w-6 h-6 text-center rounded-full bg-white opacity-80'>
 					{index + 1}
@@ -73,6 +74,7 @@ export const PhotosPage = () => {
 				<img
 					key={image.id}
 					style={{ flexBasis: '30%' }}
+					className='rounded-sm'
 					src={image.src}
 					alt={`User uploaded image ${index}`}
 				/>
@@ -103,11 +105,13 @@ export const PhotosPage = () => {
 
 			<div className='flex flex-wrap items-center justify-center m-auto gap-12 max-w-[1000px]'>
 				{/* Dropzone */}
-				<section className='grid items-center border-4 border-yellow bg-white w-[288px] h-[288px]'>
+				<section
+					className='grid items-center border-4 border-yellow rounded-md bg-white w-[288px] h-[288px]'
+					style={{ boxShadow: '0px 2px 6px -2px #000' }}>
 					<div {...getRootProps({ className: 'dropzone relative w-full' })}>
 						<input {...getInputProps()} />
 						<img
-							className='w-[50%] m-auto'
+							className='w-[50%] m-auto rounded-sm'
 							src={PlusBtn}
 							alt='Add task'
 						/>

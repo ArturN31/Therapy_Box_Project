@@ -1,4 +1,4 @@
-import { TextField } from '@mui/material';
+import { Box, TextField } from '@mui/material';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { GoBackBtn } from '../components/GoBackBtn';
@@ -31,6 +31,9 @@ export const SportsPage = () => {
 			'&:before': {
 				color: '#fff',
 			},
+		},
+		'& .MuiFormLabel-root': {
+			color: '#fff',
 		},
 	};
 
@@ -106,8 +109,16 @@ export const SportsPage = () => {
 
 				{wonMatches.map((match) => {
 					return (
-						<div>
-							<div className='text-center border border-black rounded-md bg-[#55555580] flex'>
+						<Box
+							onSubmit={(e) => {
+								e.preventDefault();
+							}}
+							component='form'
+							noValidate
+							autoComplete='off'>
+							<div
+								className='text-center border border-black rounded-md bg-[#55555580] flex'
+								style={{ boxShadow: '0px 2px 6px -2px #000' }}>
 								<p className='grid basis-[40%]'>
 									<span className='text-[#0f0] font-semibold bg-[#333] rounded-tl-md border-b border-black'>
 										{match['HomeTeam']}
@@ -122,7 +133,7 @@ export const SportsPage = () => {
 									<span className='text-white'>{match['FTAG']}</span>
 								</p>
 							</div>
-						</div>
+						</Box>
 					);
 				})}
 			</div>

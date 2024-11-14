@@ -49,7 +49,7 @@ export const Homepage = () => {
 	const Logout = () => {
 		return (
 			<button
-				className='absolute right-0 p-2 mx-3 text-xl underline text-yellow hover:text-white underline-offset-8'
+				className='sm:absolute grid right-auto sm:right-0 px-5 py-2 text-xl text-white hover:opacity-70 bg-[#333] m-auto mt-5 sm:m-5 rounded-full'
 				onClick={() => handleLogout()}>
 				Logout
 			</button>
@@ -66,6 +66,7 @@ export const Homepage = () => {
 							src={picture}
 							alt={`${username}'s profile picture`}
 							className='border border-black rounded-md w-[200px]'
+							style={{ boxShadow: '0px 2px 6px -2px #000' }}
 						/>
 					</div>
 				) : (
@@ -91,7 +92,9 @@ export const Homepage = () => {
 		}
 
 		return (
-			<div className='flex flex-col w-full border-4 rounded-md border-yellow'>
+			<div
+				className='flex flex-col w-full border-4 rounded-md border-yellow'
+				style={{ boxShadow: '0px 2px 6px -2px #000' }}>
 				<p
 					className={`p-2 text-xl bg-yellow ${style}`}
 					onClick={() => {
@@ -163,12 +166,14 @@ export const Homepage = () => {
 			case 'Homepage':
 				return (
 					<div className='min-h-[100vh]'>
-						<div className='grid gap-5'>
+						<div>
 							<Logout />
 
-							<WelcomeMessage />
+							<div className='grid gap-5'>
+								<WelcomeMessage />
 
-							<CardGrid />
+								<CardGrid />
+							</div>
 						</div>
 					</div>
 				);

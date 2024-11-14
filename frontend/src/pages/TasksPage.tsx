@@ -103,7 +103,7 @@ export const TasksPage = () => {
 		<div>
 			<GoBackBtn />
 
-			<h1 className='p-10 text-white text-8xl'>Tasks</h1>
+			<h1 className='p-10 text-center text-white xl:text-left text-8xl'>Tasks</h1>
 
 			<Box
 				onSubmit={(e) => {
@@ -148,7 +148,7 @@ export const TasksPage = () => {
 						addTextField();
 					}}>
 					<img
-						className='w-10'
+						className='w-10 p-2 bg-[#444] hover:opacity-70 rounded-full'
 						src={PlusBtn}
 						alt='Add task'
 					/>
