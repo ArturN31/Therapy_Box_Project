@@ -24,8 +24,7 @@ export const SportCardContent = () => {
 			if (import.meta.env.DEV) {
 				url = 'http://localhost:3000/api/sport';
 			} else {
-				//update with deployed server url
-				url = 'https://therapy-box-project.onrender.com/';
+				url = 'https://therapy-box-project.onrender.com/api/sport';
 			}
 
 			if (!storedMatches) {

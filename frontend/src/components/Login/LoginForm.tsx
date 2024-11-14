@@ -31,8 +31,7 @@ export const LoginForm = () => {
 			if (import.meta.env.DEV) {
 				url = 'http://localhost:3000/api/user';
 			} else {
-				//update with deployed server url
-				url = 'https://therapy-box-project.onrender.com/';
+				url = 'https://therapy-box-project.onrender.com/api/user';
 			}
 			const response = await axios.post(url, formData);
 
