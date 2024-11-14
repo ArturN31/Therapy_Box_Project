@@ -55,7 +55,7 @@ export const RegisterForm = () => {
 				url = 'http://localhost:3000/api/users';
 			} else {
 				//update with deployed server url
-				//url = '';
+				url = 'https://therapy-box-project.onrender.com/';
 			}
 
 			axios

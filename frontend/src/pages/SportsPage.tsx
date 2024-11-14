@@ -52,7 +52,7 @@ export const SportsPage = () => {
 					url = 'http://localhost:3000/api/sport';
 				} else {
 					//update with deployed server url
-					//url = '';
+					url = 'https://therapy-box-project.onrender.com/';
 				}
 
 				const response = await axios.get(url);

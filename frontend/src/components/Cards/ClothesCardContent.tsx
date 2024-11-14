@@ -22,7 +22,7 @@ export const ClothesCardContent = () => {
 				url = 'http://localhost:3000/api/clothes';
 			} else {
 				//update with deployed server url
-				//url = '';
+				url = 'https://therapy-box-project.onrender.com/';
 			}
 
 			try {

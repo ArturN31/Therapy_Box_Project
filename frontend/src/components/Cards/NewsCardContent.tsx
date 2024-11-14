@@ -18,7 +18,7 @@ export const NewsCardContent = () => {
 				url = 'http://localhost:3000/api/news';
 			} else {
 				//update with deployed server url
-				//url = '';
+				url = 'https://therapy-box-project.onrender.com/';
 			}
 
 			if (!storedNews) {
